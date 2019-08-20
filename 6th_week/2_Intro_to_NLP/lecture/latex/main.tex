@@ -1,0 +1,60 @@
+\documentclass[10pt]{beamer}
+
+%%% Packages
+\usepackage[ddmmyyyy]{datetime}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{pythonhighlight}
+\usepackage{ragged2e}
+\usepackage{hyperref}
+
+%%% Theme
+\usetheme[progressbar=frametitle]{metropolis}
+
+%%% Colors
+
+\definecolor{blockcolor}{HTML}{FAFAFA}
+
+%%% Configuration
+\graphicspath{{img/}}
+
+\setbeamertemplate{sections/subsections in toc}[circle]
+\setbeamertemplate{enumerate items}[circle]
+\apptocmd{\frame}{}{\justifying}{}
+
+\lstnewenvironment{py}[1][]{\lstset{
+    style=mypython, frame=tlrb, backgroundcolor=\color{blockcolor},
+    frameround=tttt, xleftmargin=20px, xrightmargin=20px, columns=fullflexible,
+    breaklines=true,
+}}{}
+
+\lstnewenvironment{bash}[1][]{\lstset{
+    language=bash, frame=tlrb, backgroundcolor=\color{blockcolor},
+    frameround=tttt, xleftmargin=20px, xrightmargin=20px, columns=fullflexible,
+    breaklines=true,
+}}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%BEGIN CONTENT OF THE PRESENTATION%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title[Intro to NLP]{Natual Language Processing}
+\author{Alessia Mondolo}
+\institute{Academy AI}
+\date{August 13, 2019}
+\titlegraphic{\includegraphics[width=.10\textwidth]{logo}}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+
+\input{intro.tex}
+
+\input{nltk.tex}
+
+\input{homework.tex}
+
+\end{document}
